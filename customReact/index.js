@@ -6,13 +6,10 @@ function render(element, mainElement) {
 
 function createElement(elementObj) {
     const htmlElement = document.createElement(elementObj.type)
-    console.log(elementObj.props)
     for (const prop in elementObj.props) {
-            console.log("attributes se")
             htmlElement.setAttribute(prop,elementObj.props[prop])      
     }
     htmlElement.innerHTML = elementObj.innerHTML
-    console.log('Inner html set')
     render(htmlElement, mainElement)
 }
 
